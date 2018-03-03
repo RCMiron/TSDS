@@ -1,0 +1,9 @@
+#files
+tsconfig.json
+webpack.config.js
+#folders
+node_modules
+src
+#intellij
+.idea
+typescript-data-structures.iml
