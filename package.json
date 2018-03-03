@@ -1,6 +1,6 @@
 {
   "name": "typescript-data-structures",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A collection of TypeScript classes to create and use common data structures",
   "author": "RCMiron",
   "license": "MIT",
