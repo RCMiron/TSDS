@@ -2,6 +2,9 @@
 
 ## A collection of TypeScript classes to create and use common data structures
 
+![npm](https://img.shields.io/npm/dw/localeval.svg)
+
+
 ### Installing
 
  ```
