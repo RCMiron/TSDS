@@ -26,11 +26,16 @@ Use class methods
 this.linkedList.addToHead('new head');
 ```
 ## API
-LinkedList
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+###LinkedList
+Method | Paramenters | Returns 
+--- | --- | ---
+addToHead | value: any | void
+addToTail | value: any | void
+removeHead | value: any | head.value
+removeTail | value: any | tail.value
+has | value: any | first node that contains the value
+search | value: any | array of nodes that contain the value or -1
+
 
 ## Contributing
 

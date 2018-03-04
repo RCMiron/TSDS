@@ -52,7 +52,7 @@ export class LinkedList {
         return val;
     }
 
-    search(value: any): LinkedListNode {
+    has(value: any): LinkedListNode {
         let currentNode = this.head;
         while (currentNode) {
             if (currentNode.value = value) {
@@ -63,20 +63,16 @@ export class LinkedList {
         return null;
     }
 
-    indexOf(value: any): any {
-        let index = 0;
+    search(value: any): any {
         let currentNode: LinkedListNode = this.head;
-        let result: any[] = [];
+        let result: LinkedListNode[] = [];
         while (currentNode) {
             if (currentNode.value === value) {
-                result.push(index);
+                result.push(currentNode);
             }
-            index++;
             currentNode = currentNode.next;
         }
-        if (result.length && result.length === 1) {
-            return result[0];
-        } else if (result.length && result.length > 1) {
+        if (result.length && result.length > 1) {
             return result;
         } else {
             return -1;
