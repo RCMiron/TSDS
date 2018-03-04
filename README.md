@@ -26,7 +26,7 @@ Use class methods
 this.linkedList.addToHead('new head');
 ```
 ## API
-###LinkedList
+### LinkedList
 
 Method | Paramenters | Returns 
 --- | --- | ---
