@@ -34,8 +34,8 @@ addToHead | value: any | void
 addToTail | value: any | void
 removeHead | value: any | head.value
 removeTail | value: any | tail.value
-has | value: any | first node that contains the value
-search | value: any | array of nodes that contain the value or -1
+has | value: any | first node that contains the value or null
+search | value: any | array of nodes that contain the value or null
 
 
 ## Contributing

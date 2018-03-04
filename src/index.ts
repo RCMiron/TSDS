@@ -72,11 +72,7 @@ export class LinkedList {
             }
             currentNode = currentNode.next;
         }
-        if (result.length && result.length > 1) {
-            return result;
-        } else {
-            return -1;
-        }
+        return result.length ? result : null;
     }
  }
 
