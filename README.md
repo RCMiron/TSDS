@@ -27,6 +27,7 @@ this.linkedList.addToHead('new head');
 ```
 ## API
 ###LinkedList
+
 Method | Paramenters | Returns 
 --- | --- | ---
 addToHead | value: any | void
@@ -46,7 +47,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Radu Miron** - *Initial work* - [RCMiron](https://github.com/RCMiron)
+[Radu Miron](https://github.com/RCMiron)
 
 ## Aknowledgements
 
