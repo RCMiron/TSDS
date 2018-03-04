@@ -25,6 +25,12 @@ Use class methods
 ```
 this.linkedList.addToHead('new head');
 ```
+## API
+* LinkedList
+| Method | Paramenters | Return |
+|--------|-------------|--------|
+| addToHead | value: any | void |
+
 ## Contributing
 
 Contributing rules will follow
@@ -35,6 +41,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Radu Miron** - *Initial work* - [RCMiron](https://github.com/RCMiron)
+
+## Aknowledgements
+
+[Eric Traub - Data Structures in Javascript](https://www.udemy.com/learning-data-structures-in-javascript-from-scratch)
 
 ## License
 
