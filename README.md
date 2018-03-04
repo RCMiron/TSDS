@@ -26,10 +26,11 @@ Use class methods
 this.linkedList.addToHead('new head');
 ```
 ## API
-* LinkedList
-| Method | Paramenters | Return |
-|--------|-------------|--------|
-| addToHead | value: any | void |
+LinkedList
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
 
 ## Contributing
 
