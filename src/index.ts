@@ -63,7 +63,7 @@ export class LinkedList {
         return null;
     }
 
-    search(value: any): any {
+    search(value: any): LinkedListNode[] {
         let currentNode: LinkedListNode = this.head;
         let result: LinkedListNode[] = [];
         while (currentNode) {
