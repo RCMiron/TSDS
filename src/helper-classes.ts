@@ -5,3 +5,5 @@ export class LinkedListNode {
         public prev: LinkedListNode
     ) {}
 }
+
+export type Condition = (value: any) => boolean;
