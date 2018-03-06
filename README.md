@@ -32,6 +32,9 @@ Structure | Implemented
 Doubly Linked List | ✔
 Binary Search Tree | in progress
 
+### API
+Find a short reference to each structure's public methods in src/[structure]/README.md
+
 ### Contributing
 
 Contributing rules will follow
