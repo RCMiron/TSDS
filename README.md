@@ -25,29 +25,29 @@ Use class methods
 ```
 this.linkedList.addToHead('new head');
 ```
-## Data Structures
+### Data Structures
 
 Structure | Implemented
 --- | ---
 Doubly Linked List | ✔
 Binary Search Tree | in progress
 
-## Contributing
+### Contributing
 
 Contributing rules will follow
-## Versioning
+### Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/RCMiron/TSDS/tags). 
 
-## Authors
+### Authors
 
 [Radu Miron](https://github.com/RCMiron)
 
-## Aknowledgements
+### Aknowledgements
 
 [Eric Traub - Data Structures in Javascript](https://www.udemy.com/learning-data-structures-in-javascript-from-scratch)
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
