@@ -6,9 +6,14 @@
   "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "keywords": ["data structures", "typescript", "linked list", "binary search tree"],
+  "keywords": [
+    "data structures",
+    "typescript",
+    "linked list",
+    "binary search tree"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "build": "tsc"
   },
   "repository": {
@@ -18,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/RCMiron/TSDS/issues"
   },
-  "homepage": "https://github.com/RCMiron/TSDS#readme"
+  "homepage": "https://github.com/RCMiron/TSDS#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.2",
+    "nyc": "^11.4.1",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
+  }
 }

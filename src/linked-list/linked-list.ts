@@ -7,8 +7,8 @@ export class LinkedListNode {
 }
 
 export class LinkedList {
-    private head: LinkedListNode = null;
-    private tail: LinkedListNode = null;
+    public head: LinkedListNode = null;
+    public tail: LinkedListNode = null;
 
     addToHead(value: any): void {
         const newNode = new LinkedListNode(value, this.head, null);
