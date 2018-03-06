@@ -27,7 +27,7 @@ this.linkedList.addToHead('new head');
 ```
 ### Data Structures
 
-(https://img.shields.io/badge/Linked%20List-%E2%9C%94-brightgreen.svg)
+!(https://img.shields.io/badge/Linked%20List-%E2%9C%94-brightgreen.svg)
 
 ### API
 Find a short reference to each structure's public methods in src/[structure]/README.md
