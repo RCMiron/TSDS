@@ -27,10 +27,11 @@ this.linkedList.addToHead('new head');
 ```
 ### Data Structures
 
-Structure | Implemented
+Data Structure | Status
 --- | ---
 Doubly Linked List | ✔
 Binary Search Tree | in progress
+Hash Table | planned
 
 ### API
 Find a short reference to each structure's public methods in src/[structure]/README.md
