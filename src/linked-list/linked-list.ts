@@ -7,59 +7,67 @@ export class LinkedListNode {
 }
 
 export class LinkedList {
-    public head: LinkedListNode = null;
-    public tail: LinkedListNode = null;
+    private _head: LinkedListNode = null;
+    private _tail: LinkedListNode = null;
+
+    get head(): LinkedListNode {
+        return this._head;
+    }
+
+    get tail(): LinkedListNode {
+        return this._tail;
+    }
 
     addToHead(value: any): void {
-        const newNode = new LinkedListNode(value, this.head, null);
-        if (this.head) {
-            this.head.prev = newNode;
+        const newNode = new LinkedListNode(value, this._head, null);
+        if (this._head) {
+            this._head.prev = newNode;
         } else {
-            this.tail = newNode;
+            this._tail = newNode;
         }
-        this.head = newNode;
+        this._head = newNode;
     }
 
     addToTail(value: any): void {
-        const newNode = new LinkedListNode(value, null, this.tail);
-        if (this.tail) {
-            this.tail.next = newNode;
+        const newNode = new LinkedListNode(value, null, this._tail);
+        if (this._tail) {
+            this._tail.next = newNode;
         } else {
-            this.head = newNode;
+            this._head = newNode;
         }
-        this.tail = newNode;
+        this._tail = newNode;
     }
 
     removeHead(): any {
-        if (!this.head) {
+        if (!this._head) {
             return null;
         }
-        const val = this.head.value;
-        this.head = this.head.next;
-        if (this.head) {
-            this.head.prev = null;
+        const val = this._head.value;
+        this._head = this._head.next;
+        if (this._head) {
+            this._head.prev = null;
         } else {
-            this.tail = null;
+            this._tail = null;
         }
         return val;
     }
 
     removeTail(): any {
-        if (!this.tail) {
+        if (!this._tail) {
             return null;
         }
-        const val = this.tail.value;
-        this.tail = this.tail.prev;
-        if (this.tail) {
-            this.tail.next = null;
+        const val = this._tail.value;
+        this._tail = this._tail.prev;
+        if (this._tail) {
+            this._tail.next = null;
         } else {
-            this.head = null;
+            this._head = null;
         }
         return val;
     }
 
     has(value: any): LinkedListNode {
-        let currentNode = this.head;
+        let currentNode = this._head;
         while (currentNode) {
             if (currentNode.value === value) {
                 return currentNode;
@@ -70,7 +78,7 @@ export class LinkedList {
     }
 
     search(value: any): LinkedListNode[] {
-        let currentNode: LinkedListNode = this.head;
+        let currentNode: LinkedListNode = this._head;
         let result: LinkedListNode[] = [];
         while (currentNode) {
             if (currentNode.value === value) {
