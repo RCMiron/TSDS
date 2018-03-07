@@ -1,5 +1,5 @@
 import {BinarySearchTree} from './binary-search-tree';
-import {expect, assert} from 'chai';
+import {expect, should} from 'chai';
 
 import 'mocha';
 
@@ -45,6 +45,5 @@ describe('BinarySearchTree: insert by condition or compareField', () => {
 
         bst.insert(newNode);
         expect(bst.left.value).to.be.equal(newNode);
-        console.log(bst)
     });
 });

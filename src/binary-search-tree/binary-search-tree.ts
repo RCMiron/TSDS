@@ -35,15 +35,23 @@ export class BinarySearchTree<T> {
     }
 
     insert(value: T): void {
-        if (this._condition === null && this._compareField) {
-            this._condition = () => {
-                return value[this._compareField] > this.value[this._compareField];
-            };
-        } else if (this._condition === null && this._compareField === null) {
+        if (value === Object(value) && this._condition === null && this._compareField === null) {
+            try {
+                throw new Error('Missing insertCondition or compareField');
+            } catch(e) {
+                console.log(e);
+            }
+            return;
+        } else if (value !== Object(value) && this._condition === null && this._compareField === null) {
             this._condition = () => {
                 return value > this.value;
             };
+        } else if (this._compareField) {
+            this._condition = () => {
+                return value[this._compareField] > this.value[this._compareField];
+            };
         }
+
         if (!this._condition(value)) {
             if (!this._left) {
                 this._left = new BinarySearchTree(value);
