@@ -61,7 +61,7 @@ export class LinkedList {
     has(value: any): LinkedListNode {
         let currentNode = this.head;
         while (currentNode) {
-            if (currentNode.value = value) {
+            if (currentNode.value === value) {
                 return currentNode;
             }
             currentNode = currentNode.next;
