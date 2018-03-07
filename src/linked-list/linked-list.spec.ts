@@ -13,6 +13,7 @@ describe('Add to head method', () => {
 
 describe('Remove head method', () => {
     it('should remove head and return head value', () => {
+        ll.addToHead(1);
         const result = ll.removeHead();
         expect(result).to.equal(1);
     })
