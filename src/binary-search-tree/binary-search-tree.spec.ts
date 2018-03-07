@@ -31,6 +31,7 @@ describe('BinarySearchTree: insert by condition or compareField', () => {
     it('should insert by initially set condition or compareField', () => {
         bst = new BinarySearchTree({idx: 2, score: 40});
         const newNode: TestNode = {idx: 3, score: 45};
+        bst.insert(newNode);
         const condition = (value: TestNode) => {
             return value.score > 50;
         };

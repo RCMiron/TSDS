@@ -37,9 +37,9 @@ export class BinarySearchTree<T> {
     insert(value: T): void {
         if (value === Object(value) && this._condition === null && this._compareField === null) {
             try {
-                throw new Error('Missing insertCondition or compareField');
+                throw new Error('To insert non-primitive values, first set an insertCondition or a compareField');
             } catch(e) {
-                console.log(e);
+                console.error(e);
             }
             return;
         } else if (value !== Object(value) && this._condition === null && this._compareField === null) {
