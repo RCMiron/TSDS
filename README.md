@@ -43,8 +43,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ### Authors
 
-[Radu Miron](https://github.com/RCMiron)
-[Iacob Nasca](https://github.com/cthackers)
+[Radu Miron](https://github.com/RCMiron),
+[Iacob Nasca](https://github.com/cthackers),
 [Cosmin Serboteiu](https://github.com/Annno)
 
 ### Aknowledgements
