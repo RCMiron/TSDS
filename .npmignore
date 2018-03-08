@@ -4,6 +4,7 @@ tsconfig.json
 webpack.config.js
 #folders
 node_modules
+.nyc_output
 src
 #intellij
 .idea
