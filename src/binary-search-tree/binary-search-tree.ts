@@ -1,3 +1,7 @@
+import {TraverseOrder} from "../../dist/binary-search-tree/binary-search-tree";
+
+export type TraverseOrder = 'inOrder' | 'preOrder' | 'postOrder';
+
 export class BinarySearchTree<T> {
     private _left: BinarySearchTree<T> = null;
     private _right: BinarySearchTree<T> = null;
@@ -43,6 +47,7 @@ export class BinarySearchTree<T> {
             }
             return;
         } else if (value !== Object(value) && this._condition === null && this._compareField === null) {
+            console.log(value)
             this._condition = () => {
                 return value > this.value;
             };
@@ -64,6 +69,24 @@ export class BinarySearchTree<T> {
             } else {
                 this._right.insert(value);
             }
+        }
+    }
+
+    traverseDepth(cb: (value: T) => any, order?: TraverseOrder) {
+        if (order && order === 'preOrder') {
+            cb(this.value);
+        }
+        if (this.left) {
+            this._left.traverseDepth(cb, order);
+        }
+        if (!order || order === 'inOrder') {
+            cb(this.value);
+        }
+        if (this.right) {
+            this._right.traverseDepth(cb, order);
+        }
+        if (order && order === 'postOrder') {
+            cb(this.value);
         }
     }
 }

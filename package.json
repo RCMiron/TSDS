@@ -1,6 +1,6 @@
 {
   "name": "typescript-data-structures",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "A collection of TypeScript classes to create and use common data structures",
   "author": "RCMiron",
   "license": "MIT",
@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "test": "mocha src/ --recursive -r ts-node/register src/**/*.spec.ts ",
-    "build": "webpack-cli --watch"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

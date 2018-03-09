@@ -47,3 +47,4 @@ describe('BinarySearchTree: insert by condition or compareField', () => {
         expect(bst.left.value).to.be.equal(newNode);
     });
 });
+
