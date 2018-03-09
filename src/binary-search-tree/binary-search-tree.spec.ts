@@ -48,3 +48,17 @@ describe('BinarySearchTree: insert by condition or compareField', () => {
     });
 });
 
+describe('BinarySearchTree: traverseDepth', () => {
+    it('should traverse tree least to greatest', () => {
+        const tree: BinarySearchTree<number> = new BinarySearchTree<number>(10);
+        const numbers = [100, 5];
+        let result = [];
+        numbers.forEach((number) => {
+            tree.insert(number);
+        });
+        tree.traverseDepth((value) => {
+            result.push(value);
+        }, 'inOrder');
+console.log(result)
+    })
+});
