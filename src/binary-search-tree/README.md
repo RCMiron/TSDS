@@ -12,4 +12,4 @@ Method | Parameters | Returns | What it does
 setCompareField | value: any | void | sets the compare field for insertion; nullifies insertCondition 
 setInsertCondition | (value: T) => boolean | void | sets insertion rule; nullifies compareField; be sure to use the function keyword
 insert | value: T | void | inserts new node according to insertCondition, compareField or simple comparison in the case of primitives 
-traverseDepth | (value: T) => any, order: TraverseOrder | traverses tree according to passed order: 'inOrder', 'preOrder' or 'postOrder'
+traverseDepth | (value: T) => any, order: TraverseOrder | void | traverses tree according to passed order: 'inOrder', 'preOrder' or 'postOrder'; default order: 'inOrder'
