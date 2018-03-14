@@ -27,7 +27,6 @@ describe('BinarySearchTree: setCompareField', () => {
     });
 });
 
-
 describe('BinarySearchTree: insert by condition or compareField', () => {
     it('should insert by initially set condition or compareField', () => {
         bst = new BinarySearchTree({idx: 2, score: 40});
@@ -74,8 +73,8 @@ describe('BinarySearchTree: traverseDepth inOrder', () => {
         numbers.push(10);
         const sortNumbers = numbers.sort((a, b) => a - b);
 
-        tree.traverseDepth((value) => {
-            result.push(value);
+        tree.traverseDepth((node) => {
+            result.push(node.value);
         }, 'inOrder');
         sortNumbers.forEach((n, i) => {
             expect(n).to.be.equal(result[i]);
@@ -94,8 +93,8 @@ describe('BinarySearchTree: traverseDepth preOrder', () => {
         });
         numbers.push(tree.value);
         const expectedResult =[ -50, 3, 5, 55, 72, 66, 100, 10 ];
-        tree.traverseDepth((value) => {
-            result.push(value);
+        tree.traverseDepth((node) => {
+            result.push(node.value);
         }, 'postOrder');
         expectedResult.forEach((n, i) => {
             expect(n).to.be.equal(result[i]);
@@ -103,3 +102,22 @@ describe('BinarySearchTree: traverseDepth preOrder', () => {
 
     })
 });
+
+describe('BinarySearchTree: traverseBreadth', () => {
+   it('should traverse level by level', () => {
+       const tree: BinarySearchTree<number> = new BinarySearchTree<number>(10);
+       const numbers = [100, 5, 66, 72, 55, 3, -50];
+       let result = [];
+       numbers.forEach((number) => {
+           tree.insert(number);
+       });
+       const expectedResult = [10, 5, 100, 3, 66, -50, 55, 72];
+       tree.traverseBreadth((node) => {
+          result.push(node.value);
+       });
+       expectedResult.forEach((r, i) => {
+           expect(r).to.be.equal(result[i]);
+       });
+   });
+});
+

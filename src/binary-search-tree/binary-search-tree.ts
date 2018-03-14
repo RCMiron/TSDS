@@ -1,17 +1,11 @@
 export type TraverseOrder = 'inOrder' | 'preOrder' | 'postOrder';
 
-export class Tree<T> {
-
-}
-
-import {TraverseOrder} from "../../../TSDS/src/binary-search-tree/binary-search-tree";
-
 export class BinarySearchTree<T> {
-    protected _left: BinarySearchTree<T> = null;
-    protected _right: BinarySearchTree<T> = null;
+    private _left: BinarySearchTree<T> = null;
+    private _right: BinarySearchTree<T> = null;
 
     constructor(public value: T,
-                public condition?: (value: T) => void ,
+                public condition?: (value: T) => void,
                 public compareField?: any) {
     }
 
@@ -68,21 +62,35 @@ export class BinarySearchTree<T> {
         }
     }
 
-    traverseDepth(cb: (value: T) => any, order?: TraverseOrder) {
+    traverseDepth(cb: (node: BinarySearchTree<T>) => any, order?: TraverseOrder) {
         if (order && order === 'preOrder') {
-            cb(this.value);
+            cb(this);
         }
         if (this.left) {
             this._left.traverseDepth(cb, order);
         }
         if (!order || order === 'inOrder') {
-            cb(this.value);
+            cb(this);
         }
         if (this.right) {
             this._right.traverseDepth(cb, order);
         }
         if (order && order === 'postOrder') {
-            cb(this.value);
+            cb(this);
+        }
+    }
+
+    traverseBreadth(cb: (node: BinarySearchTree<T>) => any) {
+        let queue: BinarySearchTree<T>[] = [this];
+        while(queue.length) {
+            let node = queue.shift();
+            cb(node);
+            if (node.left) {
+                queue.push(node.left);
+            }
+            if (node.right) {
+                queue.push(node.right);
+            }
         }
     }
 }
